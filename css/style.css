@@ -1,0 +1,349 @@
+:root {
+    /* Colores */
+    --blanco: white;
+    --negro: black;
+    --botonColor: goldenrod;
+    --botonColorHover: rgb(255, 200, 60);
+
+    /* Tipografia */
+    --fontPrincipal: Arial, Helvetica, sans-serif;
+    --fontLora: "Lora", serif;
+    --fontPoppins: "Poppins", sans-serif;
+
+    /* Imagenes */
+    --background: url(../img/liyue.jpg);
+}
+
+/* Globales */
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+    /* Hack para Box Model */
+    scroll-snap-type: y mandatory;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-size: 16px;
+    /* 1rem  = 10px */
+    background-image: var(--background);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: var(--fontPoppins);
+    font-weight: 400;
+    font-style: normal;
+}
+
+.contenedor-principal {
+    max-width: 120rem;
+    margin: 0 auto;
+    backdrop-filter: blur(10px);
+    padding: 2rem;
+    border-radius: 1rem;
+    border: 2px solid var(--blanco);
+}
+
+.sombra {
+    box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.50);
+}
+
+.navegacion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenido-nav a {
+    color: var(--blanco);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    margin-left: 10px;
+    margin-right: 10px;
+    transition: 0.3s;
+}
+
+@media (min-width: 768px) {
+    .navegacion {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+.contenido-nav a:hover {
+    font-weight: bold;
+}
+
+.boton {
+    background-color: var(--botonColor);
+    color: var(--blanco);
+    padding: 1rem 3rem;
+    margin-top: 1rem;
+    font-size: 1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: .5rem;
+    width: 90%;
+    text-align: center;
+    border: none;
+    transition: 0.3s;
+}
+
+@media (min-width: 768px) {
+    .boton {
+        width: auto;
+    }
+}
+
+.boton:hover {
+    cursor: pointer;
+    background-color: var(--botonColorHover);
+}
+
+.logo {
+    max-height: 50px;
+    max-width: 100px;
+    object-fit: cover;
+}
+
+.nombre-personaje {
+    font-family: var(--fontLora);
+    text-transform: uppercase;
+}
+
+.subtitulo h3 {
+    font-family: var(--fontPoppins);
+    font-weight: 400;
+    font-style: normal;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--blanco);
+    margin: unset;
+}
+
+main {
+    /* display: flex;
+    flex-direction: row;
+    justify-content: space-between; */
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* grid-template-rows: repeat(2, 1fr); */
+    grid-column-gap: 350px;
+    grid-row-gap: 20px;
+}
+
+@media (width: 768px) {
+    main {
+        flex-direction: column;
+    }
+}
+
+.grid1 { 
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+.grid2 {
+    grid-area: 1 / 2 / 3 / 3;
+}
+
+.grid3 {
+    grid-area: 2 / 1 / 3 / 2;
+}
+
+.personaje {
+    width: 400px;
+    margin-right: 40px;
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.contenido {
+    /* padding: 10rem; */
+    position: relative;
+    /* Añadir posición relativa para que z-index funcione */
+}
+
+.subcontenido {
+    background-color: rgba(255, 255, 255, 0.3);
+    /* Color de fondo con transparencia */
+    padding: 2rem;
+    /* Ajusta el espacio interior según necesites */
+    margin-bottom: 2rem;
+    /* Añade espacio entre los sections */
+    border-radius: 1rem;
+    /* Añade bordes redondeados */
+}
+
+.contenido-titulo {
+    color: gold;
+}
+
+hr {
+    background-color: gold;
+    height: 3px;
+    border: none;
+}
+
+/* Excluimos el section con la clase contenido-imagen-principal */
+.contenido-imagen-principal {
+    margin-bottom: 0;
+    /* Evita el espacio entre la imagen y el siguiente section */
+    margin-top: 125px;
+    background: none;
+}
+
+
+.contenido-imagen-principal {
+    position: absolute;
+    /* Posicionamiento absoluto para superponer la imagen */
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    /* Hacer que la imagen esté por encima de las otras filas */
+}
+
+.contenido-descripcion-personaje {
+    position: relative;
+    z-index: 2;
+    color: var(--blanco);
+    background: var(--negro);
+    background: radial-gradient(circle, rgba(0, 0, 0, 0.85) 10%, rgba(0, 0, 0, 0.50) 40%, rgba(0, 0, 0, 0) 100%);
+    margin: 0 150px 0 150px;
+    font-family: var(--fontLora);
+    font-size: 12px;
+    text-align: center;
+    padding: 10px 100px 10px 100px;
+}
+
+.barra-busqueda {
+    margin: 10px 0 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.barra-busqueda input {
+    color: var(--blanco);
+    padding: 5px;
+    width: 300px;
+    background-color: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--blanco);
+    border-radius: 5px 0 0 5px;
+}
+
+.barra-busqueda button {
+    color: var(--blanco);
+    padding: 5px;
+    background-color: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--blanco);
+    border-radius: 0 5px 5px 0;
+    transition: 0.3s;
+}
+
+.barra-busqueda button:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+}
+
+
+.skill-list {
+    list-style: none;
+    margin: 0 50px 0 0;
+    padding: 0;
+}
+
+.skill-list li {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.skill-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    text-align: center;
+    margin-right: 10px;
+}
+
+.skill-icon img {
+    width: 40px;
+    height: 40px;
+}
+
+.skill-content {
+    display: grid;
+}
+
+.skill-name {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.skill-description {
+    font-size: 14px;
+}
+
+
+/* */
+.stats-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.stats-list li {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    /* padding: 10px;
+    border-bottom: 1px solid #ccc; */
+}
+
+.stats-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    text-align: center;
+    margin-right: 10px;
+}
+
+.stats-icon img {
+    width: 40px;
+    height: 40px;
+}
+
+.stats-content {
+    display: grid;
+}
+
+.stats-name {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.stats-description {
+    font-size: 14px;
+}

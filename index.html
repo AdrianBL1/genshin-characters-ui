@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+    <title>Genshin Impact Personajes</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Lora Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap"
+        rel="stylesheet">
+    <!-- Poppins Font -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <!-- SweetAlert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script src="js/index.js"></script>
+    <script src="js/controlador.js"></script>
+    <script src="js/vista.js"></script>
+</head>
+
+<body>
+    <div class="contenedor-principal sombra">
+        <nav class="navegacion">
+            <div>
+                <img class="logo" src="img/logo.png" alt="Logo">
+            </div>
+            <div class="contenido-nav">
+                <a href="#">Inicio</a>
+                <a href="#">Noticias</a>
+                <a href="#">Personajes</a>
+            </div>
+            <div>
+                <a class="boton" href="https://genshin.hoyoverse.com" target="_blank"
+                    title="Descargar Genshin Impact">Descarga</a>
+            </div>
+        </nav>
+
+        <div class="barra-busqueda">
+            <input type="search" id="busqueda_personaje" placeholder="Busqueda de Personaje">
+            <button id="busqueda_personaje_boton">Buscar</button>
+        </div>
+
+        <div class="nombre-presonaje">
+            <div class="nombre-personaje">
+                <h2>Klee</h2>
+            </div>
+            <div class="subtitulo">
+                <h3>Luz que huye</h3>
+            </div>
+        </div>
+        <main class="contenedor-secundario">
+            <section class="contenido grid1">
+                <h4 class="contenido-titulo">Biografía</h4>
+                <hr>
+                <div class="subcontenido">
+                    <ul>
+                        <li>Elemento: Pyro</li>
+                        <li>Nación: Mondstadt</li>
+                        <li>Afiliación: Caballeros de Favonius</li>
+                        <li>Actor de Voz:</li>
+                        <ul>
+                            <li>Misaki Kuno (JP)</li>
+                            <li>Poonam Basu (EN)</li>
+                            <li>Hualing (CN)</li>
+                            <li>Bang Yeon-Ji (KR)</li>
+                        </ul>
+                    </ul>
+                </div>
+            </section>
+            <section class="contenido contenido-imagen-principal">
+                <img class="personaje" src="img/klee.png" alt="Klee">
+            </section>
+            <section class="contenido grid2">
+                <h4 class="contenido-titulo">Habilidades</h4>
+                <hr>
+                <div class="subcontenido">
+                    <ul class="skill-list">
+                        <li>
+                            <div class="skill-icon"><img src="img/skills/Catalyst_Pyro.png" alt="Catalyst_Pyro"></div>
+                            <div class="skill-content">
+                                <div class="skill-name">Normal Attack</div>
+                                <div class="skill-description">¡Kaboom!</div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="skill-icon"><img src="img/skills/Talent_Jumpy_Dumpty.png"
+                                    alt="Talent_Jumpy_Dumpty"></div>
+                            <div class="skill-content">
+                                <div class="skill-name">Elemental Skill</div>
+                                <div class="skill-description">Jumpy Dumpty</div>
+                            </div>
+
+                        </li>
+                        <li>
+                            <div class="skill-icon"><img src="img/skills/Talent_Sparks_'n'_Splash.png"
+                                    alt="Talent_Sparks_'n'_Splash"></div>
+                            <div class="skill-content">
+                                <div class="skill-name">Elemental Burst</div>
+                                <div class="skill-description">Sparks 'n' Splash</div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="skill-icon"><img src="img/skills/Talent_Pounding_Surprise.png"
+                                    alt="Talent_Pounding_Surprise"></div>
+                            <div class="skill-content">
+                                <div class="skill-name">1st Ascension Passive</div>
+                                <div class="skill-description">Pounding Surprise</div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="skill-icon"><img src="img/skills/Talent_Sparkling_Burst.png"
+                                    alt="Talent_Sparkling_Burst"></div>
+                            <div class="skill-content">
+                                <div class="skill-name">4th Ascension Passive</div>
+                                <div class="skill-description">Sparkling Burst</div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="skill-icon"><img src="img/skills/Talent_All_Of_My_Treasures!.png"
+                                    alt="Talent_All_Of_My_Treasures!"></div>
+                            <div class="skill-content">
+                                <div class="skill-name">Utility Passive</div>
+                                <div class="skill-description">All of My Treasures!</div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section class="contenido grid3">
+                <h4 class="contenido-titulo">Estadisticas básicas</h4>
+                <hr>
+                <div class="subcontenido">
+                    <ul class="stats-list">
+                        <li>
+                            <!-- <div class="stats-icon"><img src="img/skills/Catalyst_Pyro.png" alt="Catalyst_Pyro"></div> -->
+                            <div class="stats-content">
+                                <div class="stats-name">HP</div>
+                                <div class="stats-description">801</div>
+                            </div>
+                        </li>
+                        <li>
+                            <!-- <div class="stats-icon"><img src="img/skills/Talent_Jumpy_Dumpty.png"
+                                    alt="Talent_Jumpy_Dumpty"></div> -->
+                            <div class="stats-content">
+                                <div class="stats-name">ATK</div>
+                                <div class="stats-description">24</div>
+                            </div>
+
+                        </li>
+                        <li>
+                            <!-- <div class="stats-icon"><img src="img/skills/Talent_Sparks_'n'_Splash.png"
+                                    alt="Talent_Sparks_'n'_Splash"></div> -->
+                            <div class="stats-content">
+                                <div class="stats-name">DEF</div>
+                                <div class="stats-description">48</div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </main>
+        <section class="contenido-descripcion-personaje">
+            <p>
+                ¡Caballero Chispa de los Caballeros de Favonius! Siempre con una explosión y un destello. Y luego
+                desaparece de la mirada severa del Gran Maestre Interino Jean. Claro, el tiempo en confinamiento
+                solitario te da mucho tiempo para pensar en nuevas fórmulas de pólvora... Pero aún sería mejor no estar
+                en solitario en primer lugar.
+            </p>
+        </section>
+    </div>
+    <footer>
+        <p>© 2024 miHoYo. Todos los derechos reservados.</p>
+        <p>UI creado por AdrianBL.</p>
+    </footer>
+</body>
+
+</html>
