@@ -5,6 +5,8 @@
 <h3>Genshin Impact Characters UI Web Design</h3>
 <h4>Diseño web de interfaz de usuario de personajes de Genshin Impact</h4>
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/b299d806-1193-4598-8099-58dd3ca55316/deploy-status)](https://app.netlify.com/sites/genshin-character-ui/deploys)
+
 <hr>
 
 Diseño basado en diseño web
